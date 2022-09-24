@@ -1,0 +1,4 @@
+package listener
+
+interface CardListener {
+}

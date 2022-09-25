@@ -7,6 +7,7 @@ open class Hewan (
     var nama: String,
     var umur: Int,
     var imageUri: String
+
 ): Parcelable {
 
     constructor(parcel: Parcel) : this(
@@ -15,12 +16,12 @@ open class Hewan (
         parcel.readString()!!
     )
 
-    fun interaction(): String {
-        return "a";
+    open fun MakeSound(): String {
+        return "";
     }
 
-    fun feed(): String {
-        return "a";
+    open fun GiveFood(): String {
+        return "";
     }
 
     override fun writeToParcel(parcel: Parcel, flags: Int) {

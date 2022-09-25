@@ -3,131 +3,144 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:background="#000000">
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cv1"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="200dp"
-        app:cardBackgroundColor="#F2F2F2"
-        app:cardCornerRadius="25dp">
+        android:layout_height="match_parent">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv1"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="200dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            app:cardBackgroundColor="#F2F2F2"
+            app:cardCornerRadius="25dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
-            <TextView
-                android:id="@+id/namahewan"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:text="TextView"
-                android:textColor="#000000"
-                android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/cardView"
-                app:layout_constraintTop_toTopOf="@+id/cardView" />
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
-            <TextView
-                android:id="@+id/jenishewan"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="10dp"
-                android:text="TextView"
-                android:textColor="#000000"
-                app:layout_constraintEnd_toEndOf="@+id/namahewan"
-                app:layout_constraintStart_toEndOf="@+id/cardView"
-                app:layout_constraintTop_toBottomOf="@+id/namahewan" />
-
-            <TextView
-                android:id="@+id/textView3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="10dp"
-                android:text="Usia :"
-                android:textColor="#000000"
-                app:layout_constraintStart_toEndOf="@+id/cardView"
-                app:layout_constraintTop_toBottomOf="@+id/jenishewan" />
-
-            <TextView
-                android:id="@+id/usiahewan"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:text="TextView"
-                android:textColor="#000000"
-                app:layout_constraintBottom_toBottomOf="@+id/textView3"
-                app:layout_constraintStart_toEndOf="@+id/textView3"
-                app:layout_constraintTop_toTopOf="@+id/textView3" />
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/buttone"
-                android:layout_width="86dp"
-                android:layout_height="41dp"
-                android:layout_marginTop="25dp"
-                android:background="#FFC0CB"
-                android:text="EDIT"
-                app:cornerRadius="10dp"
-                app:layout_constraintStart_toStartOf="@+id/textView3"
-                app:layout_constraintTop_toBottomOf="@+id/textView3" />
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/button2"
-                android:layout_width="87dp"
-                android:layout_height="41dp"
-                android:layout_marginStart="10dp"
-                android:background="#FFC0CB"
-                android:text="DELETE"
-                app:cornerRadius="10dp"
-                app:layout_constraintBottom_toBottomOf="@+id/buttone"
-                app:layout_constraintStart_toEndOf="@+id/buttone"
-                app:layout_constraintTop_toTopOf="@+id/buttone" />
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/cardView"
-                android:layout_width="120dp"
-                android:layout_height="120dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginBottom="20dp"
-                app:cardBackgroundColor="#E1FFFFFF"
-                app:cardCornerRadius="20dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
-
-                <ImageView
-                    android:id="@+id/imageView4"
+                <TextView
+                    android:id="@+id/namahewan"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/cowow" />
-            </androidx.cardview.widget.CardView>
+                    android:layout_marginStart="20dp"
+                    android:text="TextView"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toEndOf="@+id/cardView"
+                    app:layout_constraintTop_toTopOf="@+id/cardView" />
 
-            <ImageButton
-                android:id="@+id/imageButton2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="20dp"
-                android:layout_marginBottom="70dp"
-                android:backgroundTint="#FFC0CB"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:srcCompat="@drawable/ic_baseline_fastfood_30" />
+                <TextView
+                    android:id="@+id/jenishewan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="TextView"
+                    android:textColor="#000000"
+                    app:layout_constraintStart_toStartOf="@+id/namahewan"
+                    app:layout_constraintTop_toBottomOf="@+id/namahewan" />
 
-            <ImageButton
-                android:id="@+id/imageButton3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="5dp"
-                android:backgroundTint="#FFC0CB"
-                app:layout_constraintBottom_toTopOf="@+id/imageButton2"
-                app:layout_constraintEnd_toEndOf="@+id/imageButton2"
-                app:layout_constraintStart_toStartOf="@+id/imageButton2"
-                app:layout_constraintTop_toTopOf="@+id/namahewan"
-                app:srcCompat="@drawable/ic_baseline_surround_sound_30" />
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Usia :"
+                    android:textColor="#000000"
+                    app:layout_constraintStart_toStartOf="@+id/jenishewan"
+                    app:layout_constraintTop_toBottomOf="@+id/jenishewan" />
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </androidx.cardview.widget.CardView>
+                <TextView
+                    android:id="@+id/umurhewan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="TextView"
+                    android:textColor="#000000"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView3"
+                    app:layout_constraintStart_toEndOf="@+id/textView3"
+                    app:layout_constraintTop_toTopOf="@+id/textView3" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/buttone"
+                    android:layout_width="86dp"
+                    android:layout_height="41dp"
+                    android:layout_marginTop="25dp"
+                    android:background="#FFC0CB"
+                    android:text="EDIT"
+                    app:cornerRadius="10dp"
+                    app:layout_constraintStart_toStartOf="@+id/textView3"
+                    app:layout_constraintTop_toBottomOf="@+id/textView3"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/buttond"
+                    android:layout_width="87dp"
+                    android:layout_height="41dp"
+                    android:layout_marginStart="10dp"
+                    android:background="#FFC0CB"
+                    android:text="DELETE"
+                    app:cornerRadius="10dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/buttone"
+                    app:layout_constraintStart_toEndOf="@+id/buttone"
+                    app:layout_constraintTop_toTopOf="@+id/buttone"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    app:cardBackgroundColor="#E1FFFFFF"
+                    app:cardCornerRadius="20dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:id="@+id/ImageHolder"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:srcCompat="@mipmap/ic_launcher" />
+                </androidx.cardview.widget.CardView>
+
+                <ImageButton
+                    android:id="@+id/TombolMakan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="70dp"
+                    android:backgroundTint="#FFC0CB"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:srcCompat="@drawable/ic_baseline_fastfood_30"
+                    tools:ignore="SpeakableTextPresentCheck" />
+
+                <ImageButton
+                    android:id="@+id/TombolSuara"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:backgroundTint="#FFC0CB"
+                    app:layout_constraintBottom_toTopOf="@+id/TombolMakan"
+                    app:layout_constraintEnd_toEndOf="@+id/TombolMakan"
+                    app:layout_constraintStart_toStartOf="@+id/TombolMakan"
+                    app:layout_constraintTop_toTopOf="@+id/namahewan"
+                    app:srcCompat="@drawable/ic_baseline_surround_sound_30"
+                    tools:ignore="SpeakableTextPresentCheck" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 </LinearLayout>
